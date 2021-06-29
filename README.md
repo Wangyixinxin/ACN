@@ -1,5 +1,5 @@
 # ACN
-> This repo holds code for [ACN: Adversarial Co-training Network for Brain Tumor Segmentation with Missing Modalities](). (MICCAI 2021 Accepted)
+> This repo holds code for [ACN: Adversarial Co-training Network for Brain Tumor Segmentation with Missing Modalities](https://arxiv.org/abs/2106.14591). (MICCAI 2021 Accepted)
 
 <!--![](https://github.com/dbader/readme-template/raw/master/header.png)-->
 
