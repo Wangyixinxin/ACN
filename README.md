@@ -9,11 +9,11 @@
 > You need to download the [BraTS2018](https://www.med.upenn.edu/sbia/brats2018/registration.html) or other multi-modality datasets into ```<root_dir>/ACN/data```
 > The dataset directory should have this basic structure (BraTS as an example):
 ```
-<root_dir>/ACN/data/GTA5/<DATA_NAME>/*/case_name/*_flair.nii.gz      
-<root_dir>/ACN/data/GTA5/<DATA_NAME>/*/case_name/*_t1.nii.gz   
-<root_dir>/ACN/data/GTA5/<DATA_NAME>/*/case_name/*_t1ce.nii.gz   
-<root_dir>/ACN/data/GTA5/<DATA_NAME>/*/case_name/*_flair.nii.gz
-<root_dir>/ACN/data/GTA5/<DATA_NAME>/*/case_name/*_seg.nii.gz     # groundtruth 
+<root_dir>/ACN/data/<DATA_NAME>/*/case_name/*_flair.nii.gz      
+<root_dir>/ACN/data/<DATA_NAME>/*/case_name/*_t1.nii.gz   
+<root_dir>/ACN/data/<DATA_NAME>/*/case_name/*_t1ce.nii.gz   
+<root_dir>/ACN/data/<DATA_NAME>/*/case_name/*_flair.nii.gz
+<root_dir>/ACN/data/<DATA_NAME>/*/case_name/*_seg.nii.gz     # groundtruth 
 ```
 ### Pre-requsites
 ```
