@@ -32,6 +32,14 @@ python train_val_ACN.py
 ### Citation
 If you find this paper or code useful for your research, please cite our paper:
 ```
+@misc{wang2021acn,
+      title={ACN: Adversarial Co-training Network for Brain Tumor Segmentation with Missing Modalities}, 
+      author={Yixin Wang and Yang Zhang and Yang Liu and Zihao Lin and Jiang Tian and Cheng Zhong and Zhongchao Shi and Jianping Fan and Zhiqiang He},
+      year={2021},
+      eprint={2106.14591},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+}
 ```
 ### Acknowledgement
 > This repo is borrowed from the [Reproduction](https://github.com/doublechenching/brats_segmentation-pytorch) of BraTS18 top1's solution and [ADVENT](https://github.com/valeoai/ADVENT)
