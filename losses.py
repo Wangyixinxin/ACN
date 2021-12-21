@@ -137,10 +137,9 @@ def unet_Co_loss(cfg, batch_pred, batch_x, batch_y, vout, mu, logvar, batch_pred
         loss_dict['et_mse_loss'] = F.mse_loss(batch_pred[:, 2], batch_pred_mono[:, 2], reduction='mean') 
         loss_dict['consistency_loss'] = loss_dict['ed_mse_loss'] + loss_dict['net_mse_loss'] + loss_dict['et_mse_loss']
     elif cfg.consistency_type == 'kl':
-        loss_dict['ed_kl_loss'] = (F.kl_div(batch_pred_mono[:, 0], batch_pred[:, 0], reduction='mean') + F.kl_div(batch_pred[:, 0], batch_pred_mono[:, 0], reduction='mean')) / 2
-        loss_dict['net_kl_loss'] = (F.kl_div(batch_pred_mono[:, 1], batch_pred[:, 1], reduction='mean') + F.kl_div(batch_pred[:, 1], batch_pred_mono[:, 1], reduction='mean')) / 2
-        loss_dict['et_kl_loss'] = (F.kl_div(batch_pred_mono[:, 2], batch_pred[:, 2], reduction='mean') + F.kl_div(batch_pred[:, 2], batch_pred_mono[:, 2], reduction='mean')) / 2
-        loss_dict['consistency_loss'] = loss_dict['ed_kl_loss'] + loss_dict['net_kl_loss'] + loss_dict['et_kl_loss']
+        batch_pred_mono_softmax = F.log_softmax(batch_pred_mono, dim=1)
+        batch_pred_softmax = F.softmax(batch_pred, dim=1)
+        loss_dict['consistency_loss'] = F.kl_div(batch_pred_mono_softmax, batch_pred_softmax, reduction='mean')
     else:
         assert False, cfg.consistency_type
   
